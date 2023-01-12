@@ -18,7 +18,7 @@ public class App
         
             MessageDigest md5Digest = MessageDigest.getInstance(algo);
 
-            md5Digest.update(algo.getBytes());
+            md5Digest.update(algo.getBytes(Charset.defaultCharset()));
 
             boolean test = md5Digest.digest() == algo.getBytes();
         } 
